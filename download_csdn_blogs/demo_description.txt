@@ -1,0 +1,14 @@
+# description for demo
+Functions
+ 1. It is function to login CSDN blog web and download the corresponding user's blogs
+ 2. After get the blogs list, there is another function in DB to store the title and url of blogs to mysql database.
+
+APIs
+ urllib
+ bs4
+ re
+ requests
+ pymysql
+
+Python Version
+2.7.13

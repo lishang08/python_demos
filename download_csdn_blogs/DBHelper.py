@@ -7,7 +7,7 @@ class DBHelper:
 
     def testDBConnection(self):
         """test db connection"""
-        db = pymysql.connect(host="localhost",user="root",password="Abcd1234",db="python", port="3306", charset="utf8" )
+        db = pymysql.connect(host="localhost",user="root",password="xxxxxx",db="python", port="3306", charset="utf8" )
         cursor = db.cursor()
         cursor.execute("SELECT VERSION()")
         data = cursor.fetchone()

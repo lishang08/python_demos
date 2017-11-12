@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 import requests
 from bs4 import BeautifulSoup
 import urllib
@@ -22,7 +22,7 @@ class CsdnHelper:
         """login main function"""
         form_data = self._prepare_login_form_data(username, password)
         response = self._session.post(CsdnHelper.csdn_login_url, data=form_data)
-        #valid = False
+        # valid = False
         if 'UserNick' in response.cookies:
             nick = response.cookies['UserNick']
             print("Login succeed")
@@ -76,7 +76,6 @@ class CsdnHelper:
             page = BeautifulSoup(response.text, 'lxml')
             links = page.find_all('a', href=re.compile(r'http://blog.csdn.net/flsmgf/article/details/(\d+)'))
             for link in links:
-
                 blog_name = link.string
                 blog_url = link['href']
                 # print(blog_name +","+ blog_url)
