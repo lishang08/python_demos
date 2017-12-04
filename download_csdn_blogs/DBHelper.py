@@ -16,7 +16,7 @@ class DBHelper:
 
     def insertArticles(self, title, url, comments, thumbs):
         """store new article to database"""
-        db = pymysql.connect(host="localhost",user="root",password="xxxxxx",db="python", port=3306, charset="utf8" )
+        db = pymysql.connect(host="localhost",user="root",password="abcd1234",db="python", port=3306, charset="utf8" )
         sqlStr = 'insert into articles (title, url, comments, thumbs) values("%s", "%s", "%d", "%d")' % (title, url, comments, thumbs)
         print(sqlStr)
         try:
