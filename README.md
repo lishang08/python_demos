@@ -1,4 +1,9 @@
 # python_demos
 
-just want to create some demos for the python common function usage.
-It will help like the APIs that can be use whenever we may meet the case in the development.
+这个项目是python自学项目，旨在将学习的知识转化为小的模块，在以后的学习和工作中，如果有遇到类似的问题，可以作为参考。
+
+目前实现的有：
+1. 模拟登录csdn
+2. 抓取csdn博客上的数据
+3. 读取配置文档
+4. 将抓取的数据写入数据库
