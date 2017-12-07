@@ -1,8 +1,8 @@
 # coding=utf-8
 
 import ConfigParser
-import os
 
+'''
 cf = ConfigParser.ConfigParser()
 
 cf.read('test.conf')
@@ -44,6 +44,20 @@ print('db_port:', db_port)
 print('db_pass:', db_pass)
 print('db_threads:', threads)
 print('db_processors:', processors)
+'''
 
+class ConfigReader:
 
+    def read(self):
+        """获取数据库配置文件中的连接信息"""
+        cf = ConfigParser.ConfigParser()
+        cf.read('/Users/fulishang/development/python/python_demos/file_handler/test.conf')
+        return cf
+
+if __name__ == '__main__':
+    configReader = ConfigReader()
+    configs = configReader.read()
+    print(configs, type(configs))
+    db_schema = configs.get('db','db_schema')
+    print(db_schema)
 
