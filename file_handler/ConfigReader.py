@@ -51,7 +51,7 @@ class ConfigReader:
     def read(self):
         """获取数据库配置文件中的连接信息"""
         cf = ConfigParser.ConfigParser()
-        cf.read('/Users/fulishang/development/python/python_demos/file_handler/test.conf')
+        cf.read('/Users/fulishang/development/python/python_demos/config_for_test/test.conf')
         return cf
 
 if __name__ == '__main__':

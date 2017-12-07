@@ -1,9 +1,11 @@
 # coding=utf-8
+import re
+import urllib
+
 import requests
 from bs4 import BeautifulSoup
-import urllib
-import re
-from DBHelper import DBHelper
+
+from database_handler.DBHelper import DBHelper
 
 
 class CsdnHelper:
