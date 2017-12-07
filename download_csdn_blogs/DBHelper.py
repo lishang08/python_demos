@@ -24,11 +24,11 @@ class DBHelper:
         # read by type
         db_host = dbconfigs.get('db', 'db_host')
         db_user = dbconfigs.get('db', 'db_user')
-        db_port = dbconfigs.get('db', 'db_port')
+        db_port = dbconfigs.getint('db', 'db_port')
         db_pass = dbconfigs.get('db', 'db_pass')
         db_schema = dbconfigs.get('db', 'db_schema')
 
-        db = pymysql.connect(host=db_host,user=db_user,password=db_pass,db=db_schema, port=int(db_port), charset="utf8" )
+        db = pymysql.connect(host=db_host,user=db_user,password=db_pass,db=db_schema, port=db_port, charset="utf8" )
 
         sqlStr = 'insert into articles (title, url, comments, thumbs) values("%s", "%s", "%d", "%d")' % (title, url, comments, thumbs)
         print(sqlStr)
