@@ -5,6 +5,7 @@ excel 读写
 """
 
 import xlrd
+import csv
 import os.path
 from StringUtil import StringUtil
 import sys
@@ -42,6 +43,15 @@ class ExcelHandler:
 
             print("=============")
 
+    def readCSV(self, filename):
+
+        """读取csv文件"""
+
+        csvData = csv.reader(file(filename, 'rb'), dialect='excel') # 注意要加上dialect
+
+        for row in csvData:
+            print(row)
+
 
     def route(self, filename):
 
@@ -53,7 +63,7 @@ class ExcelHandler:
         if fileSuffix == '.xls' or fileSuffix == '.xlsx':
             self.readExcel(filename)
         elif fileSuffix == '.csv':
-            print('will support csv in next version')
+            self.readCSV(filename)
         else:
             print('Only support excel format')
 
@@ -61,7 +71,7 @@ class ExcelHandler:
 
         """根据输入提前判断是否继续下一步"""
 
-        if str == 'stop':
+        if str.lower() == 'stop':
             sys.exit()
         else:
             if os.path.exists(filename):
