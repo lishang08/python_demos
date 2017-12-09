@@ -1,35 +1,43 @@
-# coding=gbk
+# coding=utf-8
+"""
+excel è¯»å†™
+æ”¯æŒ xlsï¼Œ xlsx æ ¼å¼
+"""
 
 import xlrd
+from StringUtil import StringUtil
 
-data = xlrd.open_workbook('fruits.xls')
-
-#table = data.sheet_by_index(0) #Í¨¹ıË÷ÒıË³Ğò»ñÈ¡
-
-table = data.sheet_by_name(u"¹¤×÷±í1")
-
-rows = table.nrows #»ñÈ¡ĞĞÊı
-cols = table.ncols #»ñÈ¡ÁĞÊı
-
-for row in range(rows):
-    for i in range(len(table.row_values(row))):
-        print(table.row_values(row)[i])
-
-
-'''
 class ExcelHandler:
-    """
-    excel ¶ÁĞ´²Ù×÷
-    """
+
+    def readExcel(self, filename):
+        excel = xlrd.open_workbook(filename)
+        ts = len(excel.sheets())
+        for i in range(0, ts):
+            sheet = excel.sheet_by_index(i)
+            print(u'å½“å‰å¤„ç†: %s ' % sheet.name)
+
+            rows = sheet.nrows  # è·å–è¡Œæ•°
+            cols = sheet.ncols  # è·å–åˆ—æ•°
+            for i in range(rows):
+                for j in range(cols):
+                    #æ ¼å¼åŒ–date
+                    dataType = sheet.cell(i, j).ctype
+                    if dataType == 3:
+                        util = StringUtil()
+                        print(util.formatDate(sheet.cell_value(i, j), dataType))
+                    else:
+                        print(sheet.cell_value(i, j))
+
+                print("--------------")
+
+            print("=============")
 
 
 
-    def read(self):
-        """¶ÁÈ¡excelÊı¾İ"""
-        return False
+if __name__ == '__main__':
 
-    def write(self):
-        """Ğ´ÈëÊı¾İ"""
-        return False
+    excelHandler = ExcelHandler()
+    excelHandler.readExcel('management.xls')
 
-'''
+
+
