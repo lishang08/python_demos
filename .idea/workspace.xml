@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d079506-d1ca-498c-9fca-95a67fbae9e9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/file_handler/management.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/file_handler/StringUtil.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/file_handler/fruits.xls" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file_handler/management.xls" afterPath="$PROJECT_DIR$/file_handler/management.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file_handler/ExcelHandler.py" afterPath="$PROJECT_DIR$/file_handler/ExcelHandler.py" />
     </list>
@@ -17,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/python_demos$ExcelHandler.coverage" NAME="ExcelHandler Coverage Results" MODIFIED="1512804907081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file_handler" />
+    <SUITE FILE_PATH="coverage/python_demos$ExcelHandler.coverage" NAME="ExcelHandler Coverage Results" MODIFIED="1512832315344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file_handler" />
     <SUITE FILE_PATH="coverage/python_demos$StringUtil.coverage" NAME="StringUtil Coverage Results" MODIFIED="1512804248004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file_handler" />
     <SUITE FILE_PATH="coverage/python_demos$FileHandler__1_.coverage" NAME="FileHandler (1) Coverage Results" MODIFIED="1512399810816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file_handler" />
     <SUITE FILE_PATH="coverage/python_demos$ConfigReader.coverage" NAME="ConfigReader Coverage Results" MODIFIED="1512653885139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file_handler" />
@@ -36,8 +34,8 @@
       <file leaf-file-name="CsdnHelper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/download_csdn_blogs/CsdnHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+            <state relative-caret-position="0">
+              <caret line="72" column="53" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="53" />
               <folding>
                 <element signature="e#15#24#0" expanded="true" />
               </folding>
@@ -75,16 +73,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ConfigReader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file_handler/ConfigReader.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,26 +83,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBHelper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database_handler/DBHelper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-              <folding>
-                <element signature="e#15#29#0" expanded="true" />
-                <marker date="1512655000000" expanded="true" signature="1016:1098" ph="insert into articles... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ExcelHandler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/file_handler/ExcelHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="-465">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <element signature="e#49#60#0" expanded="true" />
+                <element signature="e#54#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -301,6 +276,9 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/file_handler" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config_for_test" />
       <recent name="$PROJECT_DIR$/database_handler" />
@@ -761,7 +739,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#49#60#0" expanded="true" />
+            <element signature="e#54#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1072,16 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download_csdn_blogs/CsdnHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-          <folding>
-            <element signature="e#15#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file_handler/ConfigReader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1092,7 +1060,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database_handler/DBHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="750">
           <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding>
             <element signature="e#15#29#0" expanded="true" />
@@ -1101,12 +1069,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/download_csdn_blogs/CsdnHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="53" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/file_handler/ExcelHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="-465">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#49#60#0" expanded="true" />
+            <element signature="e#54#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
