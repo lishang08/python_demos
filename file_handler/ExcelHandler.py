@@ -67,26 +67,34 @@ class ExcelHandler:
         else:
             print('Only support excel format')
 
-    def input(self, str):
+    def input(self):
 
         """根据输入提前判断是否继续下一步"""
+
+        str = raw_input("Input file: ")
 
         if str.lower() == 'stop':
             sys.exit()
         else:
-            if os.path.exists(filename):
-                excelHandler.route(filename)
+            if os.path.exists(str):
+                excelHandler.route(str)
             else:
-                print('找不到文件 %s , 请重试！' % filename)
-                sys.exit()
+                print('找不到文件 %s , 请重试！' % str)
+                # sys.exit()
+                # a = raw_input("Input file: ")
+                self.input()
+
+    def writeExcel(self):
+
+        """写数据到excel"""
 
 
 
 if __name__ == '__main__':
 
     excelHandler = ExcelHandler()
-    filename = raw_input("Input file: ")
-    excelHandler.input(filename)
+    # filename = raw_input("Input file: ")
+    excelHandler.input()
 
 
 
