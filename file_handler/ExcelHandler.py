@@ -119,14 +119,20 @@ class ExcelHandler:
 
         """保存数据到csv文件"""
 
+        with open(filename, "w") as csvfile:
+
+            writer = csv.writer(csvfile)
+            writer.writerow(["index", "a_name", "b_name"])
+            writer.writerows([[0, 1, 3], [1, 2, 3], [2, 3, 4]])
 
 
 if __name__ == '__main__':
 
     excelHandler = ExcelHandler()
     # filename = raw_input("Input file: ")
-    #excelHandler.input()
-    excelHandler.saveExcel('test_write_excel.xls')
+    # excelHandler.input()
+    # excelHandler.saveExcel('test_write_excel.xls')
+    excelHandler.saveCSV('test_write_csv.csv')
 
 
 
