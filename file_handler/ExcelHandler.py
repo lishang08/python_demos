@@ -5,6 +5,7 @@ excel 读写
 """
 
 import xlrd
+import xlwt
 import csv
 import os.path
 from StringUtil import StringUtil
@@ -84,9 +85,39 @@ class ExcelHandler:
                 # a = raw_input("Input file: ")
                 self.input()
 
-    def writeExcel(self):
 
-        """写数据到excel"""
+    def writeSheetRow(self, sheet, rowValueList, rowIndex):
+
+        """写行数据到sheet"""
+
+        i = 0
+        for sValue in rowValueList:
+            strValue = unicode(str(sValue), 'utf-8')
+            sheet.write(rowIndex, i, strValue)
+            i = i + 1
+
+
+    def saveExcel(self, filename):
+
+        """保存数据到excel"""
+
+        wbk = xlwt.Workbook()
+        sheet = wbk.add_sheet('sheet1', cell_overwrite_ok=True)
+        headList = ['标题1', '标题2', '标题3', '标题4', '总计']
+        rowIndex = 0
+        self.writeSheetRow(sheet, headList, rowIndex)
+        for i in range(1, 11):
+            rowIndex = rowIndex + 1
+            valueList = []
+            for j in range(1,5):
+                valueList.append(j*i)
+            self.writeSheetRow(sheet, valueList, rowIndex)
+
+        wbk.save(filename)
+
+    def saveCSV(self, filename):
+
+        """保存数据到csv文件"""
 
 
 
@@ -94,7 +125,8 @@ if __name__ == '__main__':
 
     excelHandler = ExcelHandler()
     # filename = raw_input("Input file: ")
-    excelHandler.input()
+    #excelHandler.input()
+    excelHandler.saveExcel('test_write_excel.xls')
 
 
 
