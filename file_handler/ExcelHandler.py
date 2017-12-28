@@ -70,7 +70,7 @@ class ExcelHandler:
                         row_content.append(str(sheet.cell_value(i, j)))
 
                 contents.append(row_content)
-                
+
         return contents
 
     def readCSV(self, filename):

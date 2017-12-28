@@ -13,3 +13,5 @@ config_for_test:存放公用的测试文件数据配置文件等
 4. 将抓取的数据写入数据库
 5. 读取文件类型包括xls， xlsx， csv
 6. 写入文件类型包括xls, csv
+7. 从数据库导出到excel
+8. 从excel导入到数据库
