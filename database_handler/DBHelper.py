@@ -7,8 +7,11 @@ class DBHelper:
 
 
     def testDBConnection(self):
+
         """test db connection"""
-        db = pymysql.connect(host="localhost",user="root",password="xxxxxx",db="python", port="3306", charset="utf8" )
+
+        db = self.connect2db()
+
         cursor = db.cursor()
         cursor.execute("SELECT VERSION()")
         data = cursor.fetchone()
@@ -16,19 +19,10 @@ class DBHelper:
         db.close()
 
     def insertArticles(self, title, url, comments, thumbs):
+
         """存储数据"""
 
-        config = ConfigReader()
-        dbconfigs = config.read()
-
-        # read by type
-        db_host = dbconfigs.get('db', 'db_host')
-        db_user = dbconfigs.get('db', 'db_user')
-        db_port = dbconfigs.getint('db', 'db_port')
-        db_pass = dbconfigs.get('db', 'db_pass')
-        db_schema = dbconfigs.get('db', 'db_schema')
-
-        db = pymysql.connect(host=db_host,user=db_user,password=db_pass,db=db_schema, port=db_port, charset="utf8" )
+        db = self.connect2db()
 
         sqlStr = 'insert into articles (title, url, comments, thumbs) values("%s", "%s", "%d", "%d")' % (title, url, comments, thumbs)
         print(sqlStr)
@@ -47,6 +41,23 @@ class DBHelper:
 
 
 
+    def connect2db(self):
+
+        """连接到数据库"""
+
+        config = ConfigReader()
+        dbconfigs = config.read()
+
+        # read by type
+        db_host = dbconfigs.get('db', 'db_host')
+        db_user = dbconfigs.get('db', 'db_user')
+        db_port = dbconfigs.getint('db', 'db_port')
+        db_pass = dbconfigs.get('db', 'db_pass')
+        db_schema = dbconfigs.get('db', 'db_schema')
+
+        db = pymysql.connect(host=db_host,user=db_user,password=db_pass,db=db_schema, port=db_port, charset="utf8" )
+
+        return db
 
 if __name__ == '__main__':
     dbHelper = DBHelper()

@@ -44,6 +44,35 @@ class ExcelHandler:
 
             print("=============")
 
+    def readExcelForDB(self, filename):
+
+        """读取excel"""
+
+        excel = xlrd.open_workbook(filename)
+        ts = len(excel.sheets())
+        contents = []
+        for i in range(0, ts):
+            sheet = excel.sheet_by_index(i)
+            print(u'当前处理表格: %s ' % sheet.name)
+
+            rows = sheet.nrows  # 获取行数
+            cols = sheet.ncols  # 获取列数
+            for i in range(rows):
+                if i == 0:
+                    continue # 去掉第一行
+                row_content = []
+                for j in range(cols):
+                    dataType = sheet.cell(i, j).ctype  # 格式化date
+                    if dataType == 3:
+                        util = StringUtil()
+                        row_content.append(str(util.formatDate(sheet.cell_value(i, j), dataType)))
+                    else:
+                        row_content.append(str(sheet.cell_value(i, j)))
+
+                contents.append(row_content)
+                
+        return contents
+
     def readCSV(self, filename):
 
         """读取csv文件"""
@@ -111,6 +140,25 @@ class ExcelHandler:
             valueList = []
             for j in range(1,5):
                 valueList.append(j*i)
+            self.writeSheetRow(sheet, valueList, rowIndex)
+
+        wbk.save(filename)
+
+    def saveDBData2Excel(self, data, filename):
+
+        """保存数据库数据到excel"""
+
+        wbk = xlwt.Workbook()
+        sheet = wbk.add_sheet('sheet1', cell_overwrite_ok=True)
+        headList = ['id', 'title', 'url', 'comments', 'thumbs']
+        rowIndex = 0
+        self.writeSheetRow(sheet, headList, rowIndex)
+
+        for d in data:
+            rowIndex = rowIndex + 1
+            valueList = []
+            for j in range(0,len(data[0])):
+                valueList.append(d[j])
             self.writeSheetRow(sheet, valueList, rowIndex)
 
         wbk.save(filename)
