@@ -1,6 +1,6 @@
-# coding=gbk
+# coding=utf-8
 
-"""从数据库读取数据到excel"""
+"""浠庢暟鎹簱璇诲彇鏁版嵁鍒癳xcel"""
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
